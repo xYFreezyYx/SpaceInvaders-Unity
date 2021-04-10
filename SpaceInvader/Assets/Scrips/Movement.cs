@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetButtonDown("Shoot") && canFire == true)
             {
+                GetComponent<AudioSource>().Play();
                 Shoot();
             }
         }        

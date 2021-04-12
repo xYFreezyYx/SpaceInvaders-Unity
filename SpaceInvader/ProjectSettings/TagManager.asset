@@ -7,6 +7,9 @@ TagManager:
   - Wall Right
   - Wall Left
   - Bullet
+  - Enemy
+  - -Hp
+  - Game Over
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - 
   - 
   - Bullet
-  - 
-  - 
-  - 
+  - Wall
+  - Enemy
+  - Palyer
   - 
   - 
   - 

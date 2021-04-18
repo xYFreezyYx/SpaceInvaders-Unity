@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class EnemyController : MonoBehaviour
+public class EnemyControler : MonoBehaviour
 {
     private Animator animator;
+    public int enemyHp;
 
     private void Start()
     {
@@ -16,7 +17,12 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            StartCoroutine(KillEnemy());            
+            enemyHp--;
+
+            if (enemyHp == 0)
+            {
+                StartCoroutine(KillEnemy());
+            }            
         }
         else if (collision.gameObject.tag == "-Hp")
         {

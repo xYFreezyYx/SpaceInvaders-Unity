@@ -6,18 +6,66 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/P1MainMenu.unity
+    path: Assets/Scenes/Menus/P1MainMenu.unity
+    guid: bc18a2fdf59721544b9cdd1214af33f5
+  - enabled: 1
+    path: Assets/Scenes/Menus/P2MainMenu.unity
     guid: 881b3aabae82df944842bf2c7305bae3
   - enabled: 1
-    path: Assets/Scenes/ControllsMenu.unity
+    path: Assets/Scenes/Menus/ControllsMenu.unity
     guid: 968d3310e84988644b3b4a045add1163
   - enabled: 1
-    path: Assets/Scenes/Level 1-Hp3.unity
+    path: Assets/Scenes/P1/P1 Level 1/P1-Level 1-Hp3.unity
     guid: eba00910940a68343bc96010cf441926
   - enabled: 1
-    path: Assets/Scenes/Level 1-Hp2.unity
+    path: Assets/Scenes/P1/P1 Level 1/P1-Level 1-Hp2.unity
     guid: 9e45e126c9c9a3c4c919740d2592dfa5
   - enabled: 1
-    path: Assets/Scenes/Level 1-Hp1.unity
+    path: Assets/Scenes/P1/P1 Level 1/P1-Level 1-Hp1.unity
     guid: 675c7b557366c4040a19525b1f07a8ff
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 1/P2-Level 1-Hp1.unity
+    guid: 1aff193c9ebf0da45936e55f4fa3b55e
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 1/P2-Level 1-Hp2.unity
+    guid: fe042857fe37f834dbf41a3ef5a8e5ba
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 1/P2-Level 1-Hp3.unity
+    guid: 20ef102cbc3b20d41bf3a0a839b5cae0
+  - enabled: 1
+    path: Assets/Scenes/P1/P1 Level 2/P1-Level 2-Hp3.unity
+    guid: 70d887d7e0306ac4286b7bbbd6391ee6
+  - enabled: 1
+    path: Assets/Scenes/P1/P1 Level 2/P1-Level 2-Hp2.unity
+    guid: 184ae3e079a04974d8d6b771e10d6280
+  - enabled: 1
+    path: Assets/Scenes/P1/P1 Level 2/P1-Level 2-Hp1.unity
+    guid: 70b8982a42c7a1443b8c1e51e7e19f08
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 2/P2-Level 2-Hp3.unity
+    guid: 36af34b8c549116419bdf318d873e4a7
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 2/P2-Level 2-Hp2.unity
+    guid: 600186a218c466a41b6bce255bd3db73
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 2/P2-Level 2-Hp1.unity
+    guid: 3161d72fb1755a64da85f3f909eacc6c
+  - enabled: 1
+    path: Assets/Scenes/P1/P1 Level 3/P1-Level 3-Hp3.unity
+    guid: 296b4a5e3a1c66f49a609a422fda7aff
+  - enabled: 1
+    path: Assets/Scenes/P1/P1 Level 3/P1-Level 3-Hp2.unity
+    guid: 3197c25f7d716fc45a007bf2de499ab8
+  - enabled: 1
+    path: Assets/Scenes/P1/P1 Level 3/P1-Level 3-Hp1.unity
+    guid: e285bfe34c27db546b283c74d73d8264
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 3/P2-Level 3-Hp3.unity
+    guid: 832f1f54ddea87e458cbdf8ff7b23dac
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 3/P2-Level 3-Hp2.unity
+    guid: 354563f046e69c3469f7af18f1f3d7b2
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Level 3/P2-Level 3-Hp1.unity
+    guid: 955ade5e44945fa4eac267b8223bc6e1
   m_configObjects: {}

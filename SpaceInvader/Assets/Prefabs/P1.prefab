@@ -133,7 +133,7 @@ MonoBehaviour:
   laserBlastPrefab: {fileID: 7605257505651505094, guid: 16363554ee17f5346b7a09ebbf03d3c2, type: 3}
   firePoint: {fileID: 7586599554926641029}
   animator: {fileID: 7586599556020064329}
-  fireCooldown: 0.25
+  fireCooldown: 0.35
   moveCooldown: 0
   speed: 6
 --- !u!50 &7586599556020064333
@@ -156,7 +156,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!95 &7586599556020064329
 Animator:
   serializedVersion: 3

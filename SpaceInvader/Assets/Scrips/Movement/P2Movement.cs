@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Movement : MonoBehaviour
+public class P2Movement : MonoBehaviour
 {
     public GameObject laserBlastPrefab;
-    public Transform firePoint;   
+    public Transform firePoint;
     public Animator animator;
     public float fireCooldown, moveCooldown;
     public int speed = 6;
@@ -15,46 +14,26 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
-        moveVector = Vector3.left * speed * Time.fixedDeltaTime;
+        moveVector = Vector3.right * speed * Time.fixedDeltaTime;
         canFire = true;
         canMove = true;
     }
 
     private void Update()
-    {       
+    {
         animator.SetFloat("Speed", Mathf.Abs(speed));
 
-        if (GameController.instance.gamePlaying == true)
+        if (GameController.instance.gamePlaying == true || GameController.instance.gamePlaying == true)
         {
             if (canMove == true)
             {
                 GetMovementInput();
             }
 
-            if (Input.GetButtonDown("P1Shoot") && canFire == true)
+            if (Input.GetButtonDown("P2Shoot") && canFire == true)
             {
                 GetComponent<AudioSource>().Play();
                 Shoot();
-            }
-        }        
-        else if (GameController.instance.gamePlaying == false)
-        {
-            if (GameController.instance.numTotalHp == 0 || GameController.instance.numTotalKills == GameController.instance.numTotalEnemys)
-            {
-                if (Input.GetButtonDown("PlayAgain"))
-                {
-                    SceneManager.LoadScene("Level 1-Hp3");
-                }
-            }
-
-            if (Input.GetButtonDown("NextLevel"))
-            {
-
-            }
-            
-            if (Input.GetButtonDown("MainMenu"))
-            {
-                SceneManager.LoadScene("P1MainMenu");
             }
         }
     }
@@ -63,11 +42,11 @@ public class Movement : MonoBehaviour
     {
         canMove = false;
 
-        if (Input.GetButtonDown("P1MoveLeft"))
+        if (Input.GetButtonDown("P2MoveLeft") || Input.GetButtonDown("P2MoveLeftCon"))
         {
             moveVector = Vector3.left * speed * Time.fixedDeltaTime;
         }
-        else if (Input.GetButtonDown("P1MoveRight"))
+        else if (Input.GetButtonDown("P2MoveRight") || Input.GetButtonDown("P2MoveRightCon"))
         {
             moveVector = Vector3.right * speed * Time.fixedDeltaTime;
         }

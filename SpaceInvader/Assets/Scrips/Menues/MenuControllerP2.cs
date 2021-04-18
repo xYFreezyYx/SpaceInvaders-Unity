@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MenuController : MonoBehaviour
+public class MenuControllerP2 : MonoBehaviour
 {
-    public Button play, tutorial, quit, p1, p2;
+    public Button play, controls, quit, p1, p2;
 
     private void Start()
     {
         play.onClick.AddListener(ButtonClickPlay);
-        tutorial.onClick.AddListener(ButtonClickControlls);
+        controls.onClick.AddListener(ButtonClickControlls);
         quit.onClick.AddListener(ButtonClickQuit);
         p1.onClick.AddListener(ButtonClickSinglePlayer);
         p2.onClick.AddListener(ButtonClickMultyPlayer);
@@ -20,7 +20,7 @@ public class MenuController : MonoBehaviour
 
     private void ButtonClickPlay()
     {
-        SceneManager.LoadScene("Level 1-Hp3");
+        SceneManager.LoadScene("P2-Level 1-Hp3");
     }
 
     private void ButtonClickControlls()
@@ -35,11 +35,11 @@ public class MenuController : MonoBehaviour
 
     private void ButtonClickSinglePlayer()
     {
-
+        SceneManager.LoadScene("P1MainMenu");
     }
 
     private void ButtonClickMultyPlayer()
     {
-
+        
     }
 }

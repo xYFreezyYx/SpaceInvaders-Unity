@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public Text killCounter, timeCounter, hpCounter;
     public int numTotalEnemys, numTotalKills, numTotalHp;
     private float startTime, elapsedTime;
+    public string mainMenu, playAgain, rewindHp2, rewindHp1, NextLevel;
     TimeSpan timePlaying;
     public bool gamePlaying;
 
@@ -46,17 +47,17 @@ public class GameController : MonoBehaviour
 
     private void ButtonClickMainMenu()
     {
-        SceneManager.LoadScene("P1MainMenu");
+        SceneManager.LoadScene(mainMenu);
     }
 
     private void ButtonClickPalyAgain()
     {
-        SceneManager.LoadScene("Level 1-Hp3");
+        SceneManager.LoadScene(playAgain);
     }
 
     private void ButtonClickNextLevel()
     {
-
+        SceneManager.LoadScene(NextLevel);
     }
 
     public void Kills()
@@ -95,7 +96,7 @@ public class GameController : MonoBehaviour
         
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene("Level 1-Hp2");
+        SceneManager.LoadScene(rewindHp2);
     }
 
     IEnumerator RewindHp1()
@@ -104,7 +105,7 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene("Level 1-Hp1");
+        SceneManager.LoadScene(rewindHp1);
     }
 
     public void GameOver()
@@ -134,6 +135,24 @@ public class GameController : MonoBehaviour
         else if (gamePlaying == false)
         {
             StartCoroutine(WaitForSec());
+
+            if (numTotalHp == 0 || numTotalKills == numTotalEnemys)
+            {
+                if (Input.GetButtonDown("PlayAgain"))
+                {
+                    SceneManager.LoadScene(playAgain);
+                }
+            }
+
+            if (Input.GetButtonDown("NextLevel"))
+            {
+                SceneManager.LoadScene(NextLevel);
+            }
+
+            if (Input.GetButtonDown("MainMenu"))
+            {
+                SceneManager.LoadScene(mainMenu);
+            }
         }        
     }
 
@@ -147,7 +166,7 @@ public class GameController : MonoBehaviour
             gameUI.SetActive(false);
         }
         else if (numTotalHp == 0)
-        {
+        {            
             gameOver.SetActive(true);
             gameUI.SetActive(false);
         }

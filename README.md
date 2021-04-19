@@ -1,4 +1,4 @@
 # SpaceInvaders-Unity
 Recreating SpaceInvaders with some updates in Unity
 
-IN PROGRSS (Beta Version 1.2)
+IN PROGRSS [Beta Version 1.2]

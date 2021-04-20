@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     private float startTime, elapsedTime;
     public string mainMenu, playAgain, rewindHp2, rewindHp1, NextLevel;
     TimeSpan timePlaying;
-    public bool gamePlaying;
+    public bool gamePlaying, bossLevel;
 
     private void Awake()
     {
@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        MenuMusicController.instance.InMenu = false;
+        MusicControler.instance.InGame = true;
         GOmainMenu.onClick.AddListener(ButtonClickMainMenu);
         GOplayAgain.onClick.AddListener(ButtonClickPalyAgain);
         VmainMenu.onClick.AddListener(ButtonClickMainMenu);
@@ -35,7 +37,8 @@ public class GameController : MonoBehaviour
         hpCounter.text = $"{numTotalHp}";
         elapsedTime = 3;
         victory.SetActive(false);
-        gameOver.SetActive(false);     
+        gameOver.SetActive(false);
+        bossLevel = false;
         BeginGame();
     }
 
@@ -47,7 +50,11 @@ public class GameController : MonoBehaviour
 
     private void ButtonClickMainMenu()
     {
-        SceneManager.LoadScene(mainMenu);
+        if (bossLevel == false)
+        {
+            SceneManager.LoadScene(mainMenu);
+            MusicControler.instance.InGame = false;
+        }        
     }
 
     private void ButtonClickPalyAgain()
@@ -149,10 +156,14 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene(NextLevel);
             }
 
-            if (Input.GetButtonDown("MainMenu"))
+            if (bossLevel == false)
             {
-                SceneManager.LoadScene(mainMenu);
-            }
+                if (Input.GetButtonDown("MainMenu"))
+                {
+                    SceneManager.LoadScene(mainMenu);
+                    MusicControler.instance.InGame = false;
+                }
+            }            
         }        
     }
 

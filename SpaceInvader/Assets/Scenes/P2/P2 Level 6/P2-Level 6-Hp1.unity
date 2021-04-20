@@ -2907,8 +2907,9 @@ MonoBehaviour:
   playAgain: P2-Level 6-Hp3
   rewindHp2: P2-Level 6-Hp2
   rewindHp1: P2-Level 6-Hp1
-  NextLevel: P1-Level MiniBoss-Hp3
+  NextLevel: P2-Level MiniBoss-Hp3
   gamePlaying: 0
+  bossLevel: 0
 --- !u!4 &1073515419
 Transform:
   m_ObjectHideFlags: 0

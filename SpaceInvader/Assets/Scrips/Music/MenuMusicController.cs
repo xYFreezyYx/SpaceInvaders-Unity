@@ -15,7 +15,7 @@ public class MenuMusicController : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-        }        
+        }
         else
         {
             _instance = this;

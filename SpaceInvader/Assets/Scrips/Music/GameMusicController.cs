@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicControler : MonoBehaviour
+public class GameMusicController : MonoBehaviour
 {
-    private static MusicControler _instance;
-    public static MusicControler instance;
+    private static GameMusicController _instance;
+    public static GameMusicController instance;
     public bool InGame;
 
     private void Awake()
     {
-        if(_instance != null && _instance != this)
+        if (_instance != null && _instance != this)
         {
             Destroy(gameObject);
             return;

@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         MenuMusicController.instance.InMenu = false;
-        MusicControler.instance.InGame = true;
+        GameMusicController.instance.InGame = true;
         GOmainMenu.onClick.AddListener(ButtonClickMainMenu);
         GOplayAgain.onClick.AddListener(ButtonClickPalyAgain);
         VmainMenu.onClick.AddListener(ButtonClickMainMenu);
@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
         if (bossLevel == false)
         {
             SceneManager.LoadScene(mainMenu);
-            MusicControler.instance.InGame = false;
+            GameMusicController.instance.InGame = false;
         }        
     }
 
@@ -100,7 +100,8 @@ public class GameController : MonoBehaviour
     IEnumerator RewindHp2()
     {
         Hp1.GetComponent<AudioSource>().Play();
-        
+        removeHp.SetActive(false);
+
         yield return new WaitForSeconds(1);
 
         SceneManager.LoadScene(rewindHp2);
@@ -109,6 +110,7 @@ public class GameController : MonoBehaviour
     IEnumerator RewindHp1()
     {
         Hp1.GetComponent<AudioSource>().Play();
+        removeHp.SetActive(false);
 
         yield return new WaitForSeconds(1);
 
@@ -161,7 +163,7 @@ public class GameController : MonoBehaviour
                 if (Input.GetButtonDown("MainMenu"))
                 {
                     SceneManager.LoadScene(mainMenu);
-                    MusicControler.instance.InGame = false;
+                    GameMusicController.instance.InGame = false;
                 }
             }            
         }        

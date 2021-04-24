@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuControllerP1 : MonoBehaviour
 {
+    public static MenuControllerP1 instance;
     public Button play, controls, quit, p1, p2;
 
     private void Start()
     {
+        MenuMusicController.instance.InMenu = true;
         play.onClick.AddListener(ButtonClickPlay);
         controls.onClick.AddListener(ButtonClickControlls);
         quit.onClick.AddListener(ButtonClickQuit);

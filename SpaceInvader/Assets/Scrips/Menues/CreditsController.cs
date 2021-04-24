@@ -19,7 +19,8 @@ public class CreditsController : MonoBehaviour
 
     private void Start()
     {
-        MusicControler.instance.InGame = false;
+        GameMusicController.instance.InGame = false;
+        CreditMusicController.instance.InCredits = true;
         creditRoll = false;
         creditScene.SetActive(false);
         creditsOnOff.SetActive(true);
